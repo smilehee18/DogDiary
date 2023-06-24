@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextView Style for total -->
+    <style name="Widget.DogDiary.TextView.Subtotal" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Button Style for Calcul Button -->
+    <style name="Widget.Order.Button.Calcul"
+        parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/calcul</item>
+        <item name="android:textColor">@color/material_dynamic_primary50</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Button Style for Cancel Button -->
+    <style name="Widget.Order.Button.Cancel"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/cancel</item>
+        <item name="android:textColor">@color/material_dynamic_tertiary10</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">#b0e0e6</item>
+    </style>
+
+    <style name="Widget.Order.Button.Save"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/save</item>
+        <item name="android:backgroundTint">#b0e0e6</item>
+        <item name="android:textColor">@color/material_dynamic_tertiary10</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Order.Button.Edit"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/edit</item>
+        <item name="android:backgroundTint">#b0e0e6</item>
+        <item name="android:textColor">@color/material_dynamic_tertiary10</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Order.Button.Zero"
+        parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/zero</item>
+        <item name="android:textColor">@color/material_dynamic_primary50</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Button Style for Record Button -->
+    <style name="Widget.Order.Button.Record"
+        parent="Widget.Material3.Button.ElevatedButton.Icon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/side_margin</item>
+        <item name="android:text">@string/record</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/material_dynamic_primary50</item>
+    </style>
+
+    <style name="Widget.Diary.Header" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?attr/textAppearanceOverline</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="Widget.Diary.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.Diary.ListDiaryTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+</resources>

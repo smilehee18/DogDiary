@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="diaryListfragment"
+            type="com.example.dogdiary.ui_fragment.DogDiaryListFragment" />
+    </data>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        tools:context=".ui_fragment.DogDiaryListFragment">
+
+    <TextView
+        android:id="@+id/feed"
+        style="@style/Widget.Diary.Header"
+        android:layout_marginStart="4dp"
+        android:text="@string/feed"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/hour"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hour"
+        style="@style/Widget.Diary.Header"
+        android:layout_marginStart="0dp"
+        android:text="@string/hour"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/minute"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@+id/feed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minute"
+        style="@style/Widget.Diary.Header"
+        android:layout_marginEnd="0dp"
+        android:text="@string/minute"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/bowel"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hour"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bowel"
+        style="@style/Widget.Diary.Header"
+        android:layout_marginEnd="0dp"
+        android:text="@string/bowel"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/memo"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minute"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/memo"
+        style="@style/Widget.Diary.Header"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:text="@string/memo"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bowel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:listitem="@layout/diary_list_diary"/>
+
+<!--       <Button-->
+<!--           android:id="@+id/cancel_button"-->
+<!--           style="@style/Widget.Order.Button.Cancel"-->
+<!--           android:onClick='@{() -> diaryListfragment.cancelOrder()}'-->
+<!--           app:layout_constraintStart_toStartOf="parent"-->
+<!--           app:layout_constraintTop_toBottomOf="@+id/recyclerView" />-->
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

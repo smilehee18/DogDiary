@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TODO: Update blank fragment layout -->
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.dogdiary.model.DogViewModel" />
+
+        <variable
+            name="dogDiaryFragment"
+            type="com.example.dogdiary.DogDiaryFragment" />
+
+        <variable
+            name="diaryViewModel"
+            type="com.example.dogdiary.model.DiaryViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/feed_gram_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_feed_gram"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                app:prefixText="@string/gram_symbol">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feed_gram_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="@={viewModel.inputGram}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/feed_count_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_feed_count"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feed_gram_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feed_count_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text='@={viewModel.inputGramCount}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/walk_hour_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_walk_hour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calcul_button">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/walk_hour_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text='@={viewModel.inputHour}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/walk_minute_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_walk_minute"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/walk_hour_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/walk_minute_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text='@={viewModel.inputMinute}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bowels_count_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_bowels_count"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/walk_minute_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bowels_count_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text='@={viewModel.inputBowelsCount}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diary_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/input_diary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bowels_count_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/diary_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:singleLine="true"
+                    android:text='@={viewModel.inputMemo}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/calcul_button"
+                style="@style/Widget.Order.Button.Calcul"
+                android:onClick='@{() -> viewModel.getFeedGram()}'
+                android:textColor="@color/darkblue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feed_count_label" />
+
+            <Button
+                android:id="@+id/zero_button"
+                style="@style/Widget.Order.Button.Zero"
+                android:onClick='@{() -> viewModel.resetOrder()}'
+                app:layout_constraintStart_toEndOf="@id/calcul_button"
+                app:layout_constraintTop_toBottomOf="@+id/feed_count_label" />
+
+            <TextView
+                android:id="@+id/total"
+                style="@style/Widget.DogDiary.TextView.Subtotal"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text='@{@string/total(viewModel.total)}'
+                android:textColor="@color/darkblue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/zero_button"
+                app:layout_constraintTop_toBottomOf="@+id/feed_count_label"
+                tools:text="total $5.00" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/Widget.Order.Button.Cancel"
+                android:onClick='@{() -> dogDiaryFragment.cancelOrder()}'
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diary_label" />
+
+            <Button
+                android:id="@+id/save_button"
+                style="@style/Widget.Order.Button.Save"
+                android:onClick='@{() -> dogDiaryFragment.saveDiary()}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diary_label" />
+
+
+            <Button
+                android:id="@+id/record_button"
+                style="@style/Widget.Order.Button.Record"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:onClick='@{() -> dogDiaryFragment.recordDiary()}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/save_button"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pet_supplies_fill0_wght400_grad0_opsz48"
+                tools:layout_editor_absoluteX="7dp"
+                tools:layout_editor_absoluteY="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/feed_gram_label"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+
+
+

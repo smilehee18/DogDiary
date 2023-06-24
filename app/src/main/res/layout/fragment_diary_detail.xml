@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="diarydetailfragment"
+            type="com.example.dogdiary.ui_fragment.DiaryDetailFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            tools:context="ui_fragment.DiaryDetailFragment">
+
+
+    <TextView
+        android:id="@+id/diary_feed_label"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/feed" />
+
+    <TextView
+        android:id="@+id/diary_feed"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/diary_feed_label"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="feed total" />
+
+    <TextView
+        android:id="@+id/diary_hour_label"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_feed"
+        android:text="@string/hour" />
+
+    <TextView
+        android:id="@+id/diary_hour"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/diary_hour_label"
+        app:layout_constraintTop_toBottomOf="@+id/diary_feed"
+        tools:text="hour" />
+
+    <TextView
+        android:id="@+id/diary_minute_label"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_hour"
+        android:text="@string/minute" />
+
+    <TextView
+        android:id="@+id/diary_minute"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/diary_minute_label"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/diary_hour"
+        tools:text="minute" />
+
+    <TextView
+        android:id="@+id/diary_bowel_label"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_minute"
+        android:text="@string/bowel" />
+
+    <TextView
+        android:id="@+id/diary_bowel"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/diary_bowel_label"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/diary_minute"
+        tools:text="bowel" />
+
+    <TextView
+        android:id="@+id/diary_memo_label"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_bowel"
+        android:text="@string/memo" />
+
+    <TextView
+        android:id="@+id/diary_memo"
+        style="@style/Widget.Diary.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_memo_label"
+        tools:text="memo" />
+
+    <Button
+        android:id="@+id/delete_diary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diary_memo" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/edit_diary"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/delete_diary"
+                app:tint="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="329dp"
+                app:layout_constraintBottom_toTopOf="@+id/delete_diary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/pets_fill0_wght400_grad0_opsz48" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

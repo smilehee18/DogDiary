@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">DogDiary</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dog_name">푸들</string>
+    <string name="look_up_dogs">강아지 정보 검색하기</string>
+    <string name="action_switch_layout">스위치 레이아웃</string>
+    <string name="dog_info">강아지 정보 수정</string>
+    <string name="dog_diary">오늘의 일기 작성</string>
+    <string name="dog_search">강아지 특징 검색</string>
+    <string name="dog_record">지난 일기 보기</string>
+    <string name="input_feed_gram">사료의 질량(g 단위)을 입력하세요.</string>
+    <string name="input_feed_count">사료를 준 횟수를 입력하세요.</string>
+    <string name="input_walk_hour">산책 시간(시)을 입력하세요.</string>
+    <string name="input_walk_minute">산책 시간(분)을 입력하세요.</string>
+    <string name="input_bowels_count">배변 횟수를 입력하세요.</string>
+    <string name="input_diary">일기를 입력하세요.</string>
+    <string name="gram_symbol">(g)</string>
+    <string name="total">사료 합계: %.2f</string>
+    <string name="calcul">계산하기</string>
+    <string name="zero">값 초기화</string>
+    <string name="cancel">홈으로</string>
+    <string name="save">저장</string>
+    <string name="feed">사료 양</string>
+    <string name="hour">산책 시간</string>
+    <string name="minute">분</string>
+    <string name="bowel">배변횟수</string>
+    <string name="memo">일기</string>
+    <string name="delete">일기 삭제하기</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="delete_question">삭제하시겠습니까?</string>
+    <string name="edit_diary">EDIT</string>
+    <string name="edit_fragment_title">일기 수정하기</string>
+    <string name="record">기록 보기</string>
+    <string name="saving">저장되었습니다!</string>
+    <string name="editing">수정되었습니다!</string>
+    <string name="Iamnull">아무 정보도 입력하지 않았습니다. 다시 입력해주세요.</string>
+    <string name="button">버튼을 누르면 인터넷 창으로 이동합니다.</string>
+    <string name="edit">수정</string>
+    <string name="deleting">삭제되었습니다!</string>
+    <string name="exit">뒤로가기를 한번 더 누르면 종료합니다</string>
+</resources>

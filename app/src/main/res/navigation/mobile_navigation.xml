@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/startMenuFragment">
+
+    <fragment
+        android:id="@+id/startMenuFragment"
+        android:name="com.example.dogdiary.ui_fragment.StartMenuFragment"
+        android:label="fragment_start_menu"
+        tools:layout="@layout/fragment_start_menu" >
+        <action
+            android:id="@+id/action_startMenuFragment_to_dogDiaryFragment"
+            app:destination="@id/dogDiaryFragment" />
+        <action
+            android:id="@+id/action_startMenuFragment_to_dogListFragment"
+            app:destination="@id/typeListFragment" />
+        <action
+            android:id="@+id/action_startMenuFragment_to_dogDiaryListFragment"
+            app:destination="@id/dogDiaryListFragment" />
+        <argument
+            android:name="diaryId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogDiaryFragment"
+        android:name="com.example.dogdiary.DogDiaryFragment"
+        android:label="fragment_dog_diary"
+        tools:layout="@layout/fragment_dog_diary" >
+        <action
+            android:id="@+id/action_dogDiaryFragment_to_startMenuFragment"
+            app:destination="@id/startMenuFragment" />
+        <action
+            android:id="@+id/action_dogDiaryFragment_to_dogDiaryListFragment"
+            app:destination="@id/dogDiaryListFragment" />
+        <argument
+            android:name="diaryId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_dogDiaryFragment_to_diaryDetailFragment"
+            app:destination="@id/diaryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogDiaryListFragment"
+        android:name="com.example.dogdiary.ui_fragment.DogDiaryListFragment"
+        android:label="DogDiaryListFragment" >
+        <action
+            android:id="@+id/action_dogDiaryListFragment_to_diaryDetailFragment"
+            app:destination="@id/diaryDetailFragment" />
+        <argument
+            android:name="diaryId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_dogDiaryListFragment_to_startMenuFragment"
+            app:destination="@id/startMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeListFragment"
+        android:name="com.example.dogdiary.ui_fragment.TypeListFragment"
+        android:label="fragment_dog_list"
+        tools:layout="@layout/fragment_dog_list">
+        <action
+            android:id="@+id/action_dogListFragment_to_startMenuFragment"
+            app:destination="@id/startMenuFragment" />
+        <action
+            android:id="@+id/action_dogListFragment_to_dogListFragment2"
+            app:destination="@id/dogListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogListFragment2"
+        android:name="com.example.dogdiary.ui_fragment.DogListFragment"
+        android:label="fragment_dog_list2"
+        tools:layout="@layout/fragment_dog_list2">
+        <action
+            android:id="@+id/action_dogListFragment2_to_startMenuFragment"
+            app:destination="@id/startMenuFragment" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dogListFragment2_to_dogListFragment"
+            app:destination="@id/typeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryDetailFragment"
+        android:name="com.example.dogdiary.ui_fragment.DiaryDetailFragment"
+        android:label="DiaryDetailFragment" >
+        <action
+            android:id="@+id/action_diaryDetailFragment_to_dogDiaryListFragment"
+            app:destination="@id/dogDiaryListFragment" />
+        <argument
+            android:name="diaryId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_diaryDetailFragment_to_dogDiaryFragment"
+            app:destination="@id/dogDiaryFragment" />
+        <action
+            android:id="@+id/action_diaryDetailFragment_to_dogDiaryListFragment2"
+            app:destination="@id/dogDiaryListFragment" />
+    </fragment>
+</navigation>

@@ -17,5 +17,9 @@
 
 ***
    * ## APP Structure(StarUML)
-   <image src="https://github.com/smilehee18/DogDiary/assets/123307856/acc8e37c-734d-48cc-ba82-4e81e0e3a506" width="1000" height="800">
-   
+   <image src="https://github.com/smilehee18/DogDiary/assets/123307856/acc8e37c-734d-48cc-ba82-4e81e0e3a506" width="1000" height="800"></image>
+   * ## Folder View
+   * ### adapter, data, model, and ui_fragment folder.
+   * ### Be careful that the folder name should start with SMALL Letter! Capital letter can occur not find file ERROR.
+   <image src="https://github.com/smilehee18/DogDiary/assets/123307856/c92edd02-da6f-4bf9-ad28-11cc5ecb4162"></image>
+ 
